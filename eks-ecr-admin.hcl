@@ -1,15 +1,15 @@
 # Permissions on 'aws/creds/eks-ecr-admin' path
-path "aws/creds/eks-ecr-admin" {
-  capabilities = [ "create", "read", "update", "delete", "list"]
-}
+# path "aws/creds/eks-ecr-admin" {
+#   capabilities = [ "create", "read", "update", "delete", "list" ]
+# }
 
-# Permissions on 'kv/secret/data/aws' path
-path "secret/data/aws" {
+# Permissions on 'secret/data/aws' path
+path "secret/aws" {
   capabilities = [ "read" ]
 }
 
-# Permissions on 'kv/secret/github/eksctlDeployKey' path
-path "secret/data/github/eksctlDeployKey" {
+# Permissions on 'secret/github/eksctlDeployKey' path
+path "secret/github/eksctlDeployKey" {
   capabilities = [ "read" ]
 }
 
