@@ -1,5 +1,5 @@
-# Cakely Vault and Runner Setup
-> Vault and self hosted runner setup for cakely/api-ops and cakely/api
+# Vault and Runner Setup
+> Vault and self hosted runner setup for Rubiooo/api-ops 
 
 ## About
 
@@ -16,9 +16,9 @@ This repo is the technical complement to a webinar entitled Secure GitOps Workfl
 The work here represents the final state of the demos and workflows that were presented as a part of that webinar. It is recommended to view this repo in the context of that webinar.
 
 You are here 🍰:
-* [`cakely/api`](https://github.com/cakely/api)
-* [`cakely/api-ops`](https://github.com/cakely/api-ops)
-* **🍰 [`cakely/vault-runner-setup`](https://github.com/cakely/vault-runner-setup) 🍰 - Vault and self hosted runner setup for `cakely/api-ops` and `cakely/api`**
+* [`./api`](https://github.com/./api)
+* [`./api-ops`](https://github.com/./api-ops)
+* **🍰 [`./vault-runner-setup`](https://github.com/./vault-runner-setup) 🍰 - Vault and self hosted runner setup for `./api-ops` and `./api`**
 
 For more goodness related to cake, GitHub, and Terraform, kindly view the previous webinar entitled [Unlocking the Cloud Operating Model with GitHub Actions](https://www.hashicorp.com/resources/unlocking-the-cloud-operating-model-with-github-actions/).
 
@@ -82,7 +82,7 @@ VAULT_TOKEN=token vault read aws/sts/eks-ecr-admin ttl=30m
 
 Now that your `ROLE_ID` and `SECRET_ID` are ready, it's time to add a self hosted runner. 
 
-1. Create a [self hosted runner group for your organization](https://docs.github.com/en/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups#creating-a-self-hosted-runner-group-for-an-organization) called EKS / ECR Admin. I made it available to the `cakely/api-ops` repository.
+1. Create a [self hosted runner group for your organization](https://docs.github.com/en/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups#creating-a-self-hosted-runner-group-for-an-organization) called EKS / ECR Admin. I made it available to the `./api-ops` repository.
 1. Add a [self hosted runner to your organization](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners#adding-a-self-hosted-runner-to-an-organization). As you go through the prompts of `config.sh`, be sure to add it to the EKS / ECR Admin runner group.
 1. Start your self hosted runner with `./run.sh`. I used the very same Terminal tab as I exported `ROLE_ID` and `SECRET_ID` above.
 
@@ -136,7 +136,7 @@ VAULT_TOKEN=token vault read aws/sts/ecr-push ttl=30m
 
 Now that your `ROLE_ID` and `SECRET_ID` are ready, it's time to add another self hosted runner. 
 
-1. Create a [self hosted runner group for your organization](https://docs.github.com/en/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups#creating-a-self-hosted-runner-group-for-an-organization) called ECR Push. I made it available to the `cakely/api-ops` repository.
+1. Create a [self hosted runner group for your organization](https://docs.github.com/en/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups#creating-a-self-hosted-runner-group-for-an-organization) called ECR Push. I made it available to the `./api-ops` repository.
 1. Add a [self hosted runner to your organization](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners#adding-a-self-hosted-runner-to-an-organization). As you go through the prompts of `config.sh`, be sure to add it to the ECR Push runner group.
 1. Start your self hosted runner with `./run.sh`. I used the very same Terminal tab as I exported `ROLE_ID` and `SECRET_ID` above.
 
